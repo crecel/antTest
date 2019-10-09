@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project name="Hello World Project" default="info">
-    <target name="info">
+<project name="Hello World Project" default="compile" basedir=".">
+    <target name="init">
         <echo>Hello World - Welcome to Apache Ant!</echo>
+        <mkdir dir="/Users/nat-dmp/IdeaProjects/des" />
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="/Users/nat-dmp/IdeaProjects/antTest" destdir="/Users/nat-dmp/IdeaProjects/des"/>
+        <echo>Build into /Users/nat-dmp/IdeaProjects/des, successfully.</echo>
     </target>
 </project>
